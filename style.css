@@ -1,0 +1,1145 @@
+/* ----------------------google font ----------------------------  */
+/* ----------------------google font ----------------------------  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  
+}
+
+/* ______________Theme and colors here______________ */
+/* ______________Theme and colors here______________ */
+:root {
+  --backgroundColor: #ffffff;
+  --boxBackground: #f3f1f1;
+  --menustextcolor: #d41212;
+  --main-red-color: rgb(228, 18, 18);
+  --text-stroke-color: gray;
+  --sencond-bg-color: #0094FF;
+  --stylish-font : "Permanent Marker", cursive;
+  --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: var(--backgroundColor);
+}
+/* --------navbar design -------- */
+/* --------navbar design -------- */
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.37);
+}
+
+/* --------------logo----------- */
+/* --------------logo----------- */
+.navbar .brand-logo {
+  width: 130px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ------------------------three bars------------- ---------- */
+/* ------------------------three bars------------- ---------- */
+.navbar .sidebar-button {
+  font-size: 22px;
+  display: none;
+}
+.navbar .brand-logo img {
+  width: 100%;
+}
+
+/* ------------------navbar menus----------------------- */
+/* ------------------navbar menus----------------------- */
+.navbar ul {
+  list-style: none;
+}
+.navbar ul li {
+  display: inline-block;
+  padding: 2px 4px;
+  text-transform: uppercase;
+  margin: 0px 8px;
+  font-weight: 600;
+  color: #616161;
+  font-size: 0.9rem;
+  position: relative;
+}
+.active-link {
+  color: var(--main-red-color);
+}
+.navbar ul li:hover {
+  color: var(--main-red-color);
+}
+.navbar ul li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 22px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--main-red-color);
+  border-radius: 10px;
+  animation: menusBorder 0.2s ease-in-out forwards;
+}
+@keyframes menusBorder {
+  100% {
+    width: 100%;
+  }
+}
+.navbar .active-link {
+  color: var(--main-red-color);
+}
+.navbar .active-link::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 22px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-red-color);
+  border-radius: 10px;
+}
+
+/* ------------------navbar search-bar section---------------- */
+/* ------------------navbar search-bar section---------------- */
+.navbar .search-section {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+.navbar .search-section input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 2px 4px;
+  font-size: 1rem;
+  margin: 0px 5px;
+}
+.navbar .searchBar {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgroundColor);
+
+  padding: 8px 16px;
+  background-color: #f3f3f3;
+  border-radius: 50px;
+}
+.navbar .searchBar i {
+  font-size: 16px;
+  cursor: pointer;
+}
+.navbar .icons i {
+  font-size: 20px;
+  margin: 0px 12px;
+  cursor: pointer;
+}
+
+/* ----------------------sidebar for responsive------------------- */
+/* ----------------------sidebar for responsive------------------- */
+
+.sidebar {
+  width: 25%;
+  position: fixed;
+  left: -25%;
+  top: 0px;
+  overflow: hidden;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.062);
+  backdrop-filter: blur(2px);
+  border-radius: 0px 0px 100% 0px;
+  transition: 0.2s;
+  scale: 0.2;
+  display: none;
+  z-index: 50;
+}
+/* ----------------------sidebar animation------------------------------ */
+/* ----------------------sidebar animation------------------------------ */
+.animation {
+  animation: sidebarAminate 0.2s ease-in forwards;
+  left: 0px;
+  scale: 1;
+}
+@keyframes sidebarAminate {
+  100% {
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+  }
+}
+
+/* --------------------------sidebar menus-------------------------- */
+/* --------------------------sidebar menus-------------------------- */
+.sidebar .sidebar-menus {
+  width: 280px;
+  height: 100%;
+  background-color: rgb(253, 253, 253);
+  position: relative;
+}
+.sidebar #close-siderbar-button {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.sidebar .sidebar-menus ul {
+  list-style: none;
+  padding: 55px 25px;
+}
+.sidebar .sidebar-menus ul li {
+  margin: 8px 0px;
+  text-transform: capitalize;
+}
+.sidebar .sidebar-menus ul a {
+  text-decoration: none;
+  color: #000;
+  margin: 3px 0px;
+}
+/* -----------------hero-section-------------------- */
+.hero-section {
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  overflow: hidden;
+  /* background-color: var(--boxBackground); */
+}
+
+.hero-section .section1 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+
+.hero-section .section2 {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  overflow: hidden;
+}
+.hero-section .section2 .count-3 {
+  position: absolute;
+  transform: translate(50% 50%);
+  display: flex;
+}
+.hero-section .section2 .count-3 h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28rem;
+  font-weight: 500;
+}
+.hero-section .section2 .count-3 .one {
+  position: absolute;
+  left: -100px;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(167, 166, 166);
+  /* transform: rotateX(75deg); */
+}
+.hero-section .section2 .count-3 .two {
+  position: absolute;
+  left: 60px;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(167, 166, 166);
+}
+.hero-section .section2 .count-3 .three {
+  margin-left: 260px;
+  color: #e71f1f;
+  z-index: 6;
+}
+
+.hero-section .section2 img {
+  width: 90%;
+  margin-top: -35px;
+  filter: drop-shadow(0px 30px 35px #0000003f);
+  z-index: 5;
+}
+
+.hero-section .page-title {
+  width: 80%;
+  margin-left: 45px;
+  mix-blend-mode: multiply;
+  perspective: 600;
+}
+.hero-section .title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 3rem;
+}
+
+.hero-section .line-design {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: 10%;
+  top: -70px;
+  z-index: 2;
+  overflow: hidden;
+}
+.hero-section .section2 .shoesLine {
+  width: 3px;
+  height: 150px;
+  background: linear-gradient(
+    to top,
+    rgba(117, 12, 12, 0),
+    rgba(241, 16, 16, 0.76)
+  );
+  height: 100%;
+
+  transform: rotate(15deg);
+  position: absolute;
+  left: 80px;
+  top: 0;
+}
+.hero-section .section2 .shoes-line1 {
+  margin-left: 45px;
+}
+.hero-section .section2 .shoes-line2 {
+  margin-left: 100px;
+}
+.hero-section .title span {
+  color: var(--main-red-color);
+}
+
+/* ---------------------------designs ---------------------- */
+
+.design-circle {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 0, 0, 0.062);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  scale: 2.5;
+  animation: 1s linear infinite alternate;
+  overflow: hidden;
+  z-index: -1;
+}
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  animation: 0.5s linear infinite alternate;
+}
+.nike-background-name {
+  width: 100%;
+  position: absolute;
+  transform: translate(-50% -50%);
+  z-index: 1;
+  display: none;
+}
+.nike-background-name h1 {
+  font-size: 20rem;
+  mix-blend-mode: multiply;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(167, 166, 166);
+}
+@keyframes zoomOut {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    width: 210px;
+    height: 210px;
+  }
+}
+@keyframes zoomOutOuter {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 3.1;
+  }
+}
+/* this is a cursor follow div on screen */
+.curser {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.082);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(5px);
+  z-index: 51;
+  scale: 1;
+  transition-timing-function: linear;
+}
+#close-siderbar-button .sidebar ul li:hover ~ .curser {
+  scale: 1.2;
+}
+
+/* ------------------page 2 -------------------- */
+/* ------------------page 2 -------------------- */
+
+.page2 {
+  width: 100%;
+  height: auto;
+ 
+}
+.page2 .verticalLine{
+  width: 100vw;
+  height: 50px;
+  background: var(--sencond-bg-color);
+
+  transform-origin: center center;
+  transform: rotate(-1.8deg) ;
+  position: absolute;
+  top: 35px;
+  left: -5px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-wrap: nowrap;
+  overflow-x: hidden;
+  box-shadow: 0px 2px 15px #00000036;
+ 
+
+}
+.page2 .verticalLine:nth-child(2){
+  background: var(--main-red-color);
+
+  transform: rotate(1.8deg) ;
+}
+
+.page2 .verticalLine ul li{
+ display: inline-block;
+ font-size: 1.5rem;
+ padding: 0px 15px;
+ color: #fff;
+}
+.page2 .liness{
+  width: 100%;
+  min-height: 140px;
+  position: relative;
+  overflow-x: hidden;
+}
+.page2 .brandedLogoParent{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+
+}
+
+.page2  .brandsImages{
+  width: 100px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode:multiply;
+ margin: 35px 0px;
+}
+.page2 .modern-shoes{
+  width: 100%;
+  height: auto;
+  display: flex ;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+  margin: 50px 0px;
+  padding: 30px 0px;
+
+}
+/* modern shoes image bg desinging */
+/* modern shoes image bg desinging */
+.page2 .modern-shoes .shoes-image{
+  width: 280px;
+  height: auto;
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px
+}
+.page2 .shadow-line{
+  width: 90%;
+  height: 0px;
+  transform: rotate(45deg);
+
+}
+.page2 .shadow-line1{
+  position: relative;
+  box-shadow: 0px 0px 90px 40px rgba(228, 18, 18, 0.322);
+
+  left: 40px;
+
+}
+.page2 .shadow-line2{
+  position: relative;
+  box-shadow: 0px 0px 90px 40px #0095ff2e;
+
+  left: -40px;
+
+}
+.page2 .modern-shoes .shoes-image .shoesImage{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff52;
+  backdrop-filter: blur(25px);
+  border-radius: 15px;
+  border: 1px solid #f1f1f1;
+  display: grid;
+  place-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.page2 .modern-shoes .shoes-image .shoes-image1{
+  width: 100%;
+  transform: rotate(-45deg);
+  scale: 1.3;
+}
+
+
+.page2 .modern-shoes .shoes-info{
+  width: 60%;
+  height: auto;
+}
+.page2 .modern-shoes .shoes-info h2{
+  font-size: 2.5rem;
+  font-family: var(--stylish-font);
+  font-weight: 400;
+  font-style: normal;
+  margin: 12px 0px;
+}
+.page2 .modern-shoes .shoes-info p{
+  margin: 12px 0px;
+  font-weight: 600;
+}
+
+.page2 .modern-shoes .shoes-info .explore-more-buton{
+  padding: 6px 20px ;
+border-radius: 4px;
+  border: 1px solid var(--menustextcolor);
+  color: var(--menustextcolor);
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 2px 4px 20px #e71f1f2a;
+  position: relative;
+  overflow: hidden;
+  
+}
+.page2 .modern-shoes .shoes-info .explore-more-buton:hover{
+  background-color: var(--menustextcolor);
+  color: #FFF;
+}
+
+
+
+
+
+
+/* --------------section3 ---------------- */
+/* --------------section3 ---------------- */
+.section3 {
+  width: 100%;
+  min-height: auto;
+
+  padding: 5px 16px;
+}
+.section3 .products{
+  width: 100%;
+  padding: 10px 0px;
+}
+.section3 .products h2{
+  width: 100%;
+  padding: 16px 3px;
+  text-align: center;
+}
+.section3 .products .cards{
+
+  width: 100%;
+  margin: 0px auto;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+   justify-content: center;
+
+}
+.section3 .cards .card{
+  width: 190px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  border: 1px solid rgb(236, 236, 236);
+ overflow: hidden;
+  cursor: pointer;
+}
+.section3 .cards .card-shoes-image{
+  width: 100%;
+  height: 50%;
+  background-color: var(--boxBackground);
+  padding: 3px 16px;
+  position: relative;
+  overflow: hidden;
+}
+.section3 .cards .fa-heart{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #414040;
+
+}
+.section3 .cards .card-shoes-image img{
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode:multiply;
+}
+.section3 .cards .card:hover  img{
+
+  scale: 1.2;
+  transition: all .2s  ease-out;
+
+}
+.section3 .cards .card-shoes-info{
+  width: 100%;
+  height: auto;
+  padding: 12px 6px;
+
+
+}
+
+.section3 .cards .card-shoes-info .cardsInfo{
+  display : -webkit-box;
+-webkit-line-clamp : 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+  font-size: .90rem;
+  color: #252525;
+
+}
+.section3 .cards .card-shoes-info .tag{
+  color: #5f5e5e;
+  font-size: .80rem;
+  font-weight: bold;
+}
+.section3 .cards .card-shoes-info .price{
+  color: #414040;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#rating-lists{
+  list-style: none;
+}
+#rating-lists li{
+ display: inline-block;
+ color: rgb(255, 196, 0);
+}
+.section3 .card .card-shoes-info .fa-star{
+  padding: 0px 2px;
+  color: rgb(255, 196, 0);
+}
+
+
+
+/* ------------------------section 4 ----------------------- */
+/* ------------------------section 4 ----------------------- */
+.section4{
+  width: 100%;
+  height: auto;
+  background-color: #f4f4f4;
+padding: 30px 10px;
+margin: 45px 0px;
+
+}
+.section4 .box{
+  display: flex;
+   width: 80%;
+   height: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 25px 10px;
+
+  margin: 0px auto;
+}
+.section4 .information{
+  width: 60%;
+}
+.section4 .information h1{
+  font-size: 3rem;
+  font-family: var(--stylish-font);
+  color: var(--menustextcolor);
+}
+.section4 .information-images{
+  width: 40%;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+
+}
+
+
+.section4 .exploreButton{
+  padding: 6px 20px ;
+border-radius: 4px;
+  border: 1px solid var(--sencond-bg-color);
+  color: var(--sencond-bg-color);
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 2px 4px 20px #1fabe735;
+  position: relative;
+  overflow: hidden;
+}
+.section4 .exploreButton:hover{
+
+  border: 1px solid var(--sencond-bg-color);
+  padding: 6px 20px ;
+  border-radius: 4px;
+  color: #fff;
+  background-color: var(--sencond-bg-color);
+  box-shadow: 2px 2px 15px #0095ff39;
+  cursor: pointer;
+
+}
+.section4 .information-images .images-boxs{
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: rgba(52, 52, 52, 0.279) 0px 8px 24px;
+
+
+}
+.section4 .info-image1,.info-image2{
+  width: 160px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section4 .info-image1 .info-image-box1,.section4 .info-image2 .info-image-box4{
+  height: 190px;
+  border-radius: 12px;
+  overflow: hidden;
+
+}
+.section4 .info-image1 .info-image-box2, .section4 .info-image2 .info-image-box3{
+  height: 80px;
+
+  border-radius: 12px;
+  overflow: hidden;
+}
+.section4 #lagImage{
+  margin-top: -45px;
+
+
+  
+}
+.section4 .information-images img{
+width: 100%;
+
+}
+
+
+
+.section5 .boxes-of-shoes{
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,  1fr);
+  grid-template-rows:  repeat(2,  1fr);
+  gap: 16px;
+}
+.section5 .boxes-of-shoes .img1{
+  border: 1px solid rgb(234, 232, 232);
+  border-radius: 10px;
+  background-color: rgba(211, 210, 210, 0.14);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+}
+.section5 .boxes-of-shoes .img1 img{
+  width: 100%;
+  transform: rotate(-25deg);
+}
+
+.section5 .boxes-of-shoes .img1:nth-child(1){
+
+transform: translateY(-16px);
+
+}
+.section5 .boxes-of-shoes .img1:nth-child(3){
+
+transform: translateY(-16px);
+
+}
+.section5 .boxes-of-shoes .img1:nth-child(2){
+
+transform: translateY(16px);
+
+}
+.section5 .boxes-of-shoes .img1:nth-child(4){
+
+transform: translateY(16px);
+
+}
+.section5 #sec5-heading{
+ font-size: 3rem;
+}
+.animation{
+  padding: 5px 15px;
+  background-color: red;
+  color: wheat;
+  
+}
+
+#test{
+  width: 120px;
+  height: 120px;
+  background-color: var(--sencond-bg-color);
+margin: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------On screens that are 1024  or less, set responsives---------------*/
+/* -----------------On screens that are 1024  or less, set responsives---------------*/
+@media screen and (max-width: 1024px) {
+ 
+  
+  .navbar .searchBar {
+    padding: 8px;
+    background-color: transparent;
+  }
+  .navbar .search-section input,
+  .icons .favorite {
+    display: none;
+  }
+  .hero-section .section1,
+  .hero-section .section2 {
+    width: 50%;
+  }
+  .hero-section .section2 .count-3 .one {
+    position: absolute;
+    left: -30px;
+    z-index: -1;
+  }
+
+  .hero-section .section2 .count-3 .two {
+    position: absolute;
+    left: 60px;
+    z-index: -1;
+  }
+  .hero-section .section2 .count-3 .three {
+    margin-left: 180px;
+    color: #e71f1f;
+    z-index: 6;
+  }
+
+  .hero-section .section2 .count-3 h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16rem;
+    font-weight: 500;
+  }
+  .hero-section .section2 img {
+    width: 430px;
+    margin-top: -35px;
+    filter: drop-shadow(0px 30px 35px #0000003f);
+    z-index: 5;
+    padding: 20px 0px;
+  }
+  .hero-section .line-design {
+    width: 15rem;
+    right: 0;
+  }
+
+  .page2 .verticalLine ul li{
+    font-size: 1rem;
+  }
+  .page2 .verticalLine{
+
+    transform: rotate(-2.4deg) ;
+     height: 40px;
+   
+  
+  }
+  .page2 .verticalLine:nth-child(2){
+    transform: rotate(2.4deg) ;
+
+  }
+  .section3 .products .cards{
+    width: 100%;
+  }
+  .section4 .box{
+    width: 100%;
+    padding: 0px 15px;
+  }
+  .section4 .information h1{
+    font-size: 2.5rem;
+  }
+ 
+
+}
+
+/* -----------------On screens that are 768px  or less, set responsives---------------*/
+/* -----------------On screens that are 768px  or less, set responsives---------------*/
+
+@media screen and (max-width: 768px) {
+  .navbar .menus {
+    display: none;
+  }
+  .navbar .brand-logo {
+    width: 80px;
+  }
+  .navbar .sidebar-button {
+    display: block;
+  }
+  .sidebar {
+    display: block;
+  }
+  .hero-section {
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    height: auto;
+    gap: 0;
+  }
+  .hero-section .section1,
+  .hero-section .section2 {
+    width: 100%;
+  }
+  .hero-section .line-design {
+    display: none;
+  }
+  .hero-section .page-title {
+    width: 80%;
+    margin-left: 0px;
+  }
+  .design-circle {
+    scale: 1.4;
+    left: -150px;
+    top: -100px;
+  }
+  .s2-info {
+    display: none;
+  }
+  .page2 .verticalLine ul li{
+    font-size: .8rem;
+  }
+  .page2 .verticalLine{
+
+    transform: rotate(-3.4deg) ;
+     height: 40px;
+   
+  
+  }
+  .page2 .verticalLine:nth-child(2){
+    transform: rotate(3.4deg) ;
+
+  }
+  .page2 .liness{
+    min-height: 120px;
+  }
+  .page2  .brandsImages{
+    width: 80px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode:multiply;
+  }
+  .page2 .brandedLogoParent{
+    gap: 15px;
+  }
+  .page2 .modern-shoes{
+    width: 90%;
+    margin: 0px auto;
+  }
+  .page2 .modern-shoes .shoes-image{
+    width: 200px;
+    height: 200px;
+  }
+  .page2 .modern-shoes{
+    flex-direction: column;
+      padding: 30px 0px;
+   
+    align-items: start;
+  }
+  .page2 .modern-shoes .shoes-info{
+    width: 100%;
+  }
+
+  .page2 .modern-shoes .shoes-info h2{
+    font-size: 1.8rem;
+  }
+  .section4 .box{
+    flex-direction: column;
+  }
+  .section4 .information{
+    width: 95%;
+  }
+  .section4 .information-images{
+    width: 95%;
+  }
+ 
+  
+
+  /* .hero-section .title {
+    text-align: center;
+  } */
+}
+
+/* -----------------On screens that are 568px  or less, set responsives---------------*/
+/* -----------------On screens that are 568px  or less, set responsives---------------*/
+
+@media screen and (max-width: 640px) {
+  .section3 .products .cards{
+    width: 100%;
+    gap: 5px;
+  }
+  .section3 .cards .card{
+    width: 140px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid rgb(236, 236, 236);
+    overflow: hidden;
+  }
+  .section3 .products .cards i{
+    font-size: .8rem;
+
+  }
+  .sidebar .sidebar-menus {
+    width: 70%;
+  }
+  .hero-section .section2 img {
+    width: 300px;
+    margin-top: -35px;
+    filter: drop-shadow(0px 30px 35px #0000003f);
+    z-index: 5;
+  }
+  .hero-section .section2 .count-3 h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 10rem;
+    font-weight: 500;
+  }
+  .hero-section .section2 .count-3 .one {
+    position: absolute;
+    left: -1px;
+    z-index: -1;
+  }
+  .hero-section .section2 .count-3 .two {
+    position: absolute;
+    left: 60px;
+    z-index: -1;
+  }
+  .hero-section .section2 .count-3 .three {
+    margin-left: 140px;
+    color: #e71f1f;
+    z-index: 6;
+  }
+  .page2 .verticalLine ul li{
+    font-size: .8rem;
+    padding: 0px 2px;
+  }
+  .page2 .verticalLine{
+
+    transform: rotate(-5deg) ;
+     height: 30px;
+   
+  
+  }
+  .page2 .verticalLine:nth-child(2){
+    transform: rotate(5deg) ;
+
+  }
+  .page2 .liness{
+    min-height: 100px;
+  }
+  .page2 .brandedLogoParent{
+    gap: 6px;
+  }
+  .page2  .brandsImages{
+    width: 50px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode:multiply;
+  }
+  .page2 .modern-shoes .shoes-info h2{
+    font-size: 1.5rem;
+  }
+  .page2 .modern-shoes .shoes-info p{
+    font-weight: 400;
+  }
+  .page2 .shadow-line{
+    width: 60%;
+    height: 0px;
+    transform: rotate(45deg);
+  
+  }
+  .section4 .info-image1 .info-image-box1,.section4 .info-image2 .info-image-box4{
+    height: 150px;
+  }
+  .section4 .information-images ul li{
+     font-size: 12px;
+  }
+ 
+
+}
