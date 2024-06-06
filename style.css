@@ -839,7 +839,6 @@ transform: translateY(16px);
 }
 .animation{
   padding: 5px 15px;
-  background-color: red;
   color: wheat;
   
 }
@@ -935,6 +934,9 @@ margin: 60px;
   }
   .section4 .information h1{
     font-size: 2.5rem;
+  }
+  .curser{
+    display: none;
   }
  
 
