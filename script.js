@@ -33,12 +33,12 @@ let mover = document.querySelector("#mover");
 //   console.log(e.clientX);
 // });
 
-document.addEventListener("mousemove", (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
+// document.addEventListener("mousemove", (e) => {
+//   let x = e.pageX;
+//   let y = e.pageY;
 
-  mover.style.left = `${x}px`;
-  mover.style.top = `${y}px`;
-});
+//   mover.style.left = `${x}px`;
+//   mover.style.top = `${y}px`;
+// });
 
 

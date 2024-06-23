@@ -20,7 +20,7 @@
   --menustextcolor: #d41212;
   --main-red-color: rgb(228, 18, 18);
   --text-stroke-color: gray;
-  --sencond-bg-color: #0094FF;
+  --second-bg-color: #0094FF;
   --stylish-font : "Permanent Marker", cursive;
   --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -166,9 +166,8 @@ body {
   top: 0px;
   overflow: hidden;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.062);
-  backdrop-filter: blur(2px);
-  border-radius: 0px 0px 100% 0px;
+  background-color: rgba(254, 254, 254, 0.996);
+
   transition: 0.2s;
   scale: 0.2;
   display: none;
@@ -177,21 +176,16 @@ body {
 /* ----------------------sidebar animation------------------------------ */
 /* ----------------------sidebar animation------------------------------ */
 .animation {
-  animation: sidebarAminate 0.2s ease-in forwards;
+ width: 100%;
   left: 0px;
   scale: 1;
 }
-@keyframes sidebarAminate {
-  100% {
-    width: 100%;
-    border-radius: 0px 0px 0px 0px;
-  }
-}
+
 
 /* --------------------------sidebar menus-------------------------- */
 /* --------------------------sidebar menus-------------------------- */
 .sidebar .sidebar-menus {
-  width: 280px;
+  width: 100%;
   height: 100%;
   background-color: rgb(253, 253, 253);
   position: relative;
@@ -203,6 +197,14 @@ body {
   position: absolute;
   right: 10px;
   top: 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+
+
 }
 
 .sidebar .sidebar-menus ul {
@@ -210,8 +212,14 @@ body {
   padding: 55px 25px;
 }
 .sidebar .sidebar-menus ul li {
-  margin: 8px 0px;
+  margin: 14px 0px;
   text-transform: capitalize;
+  text-align: center;
+}
+.sidebar .sidebar-menus ul li a:hover {
+color: var(--menustextcolor);
+letter-spacing: 2px;
+transition: .3s ease-in-out;
 }
 .sidebar .sidebar-menus ul a {
   text-decoration: none;
@@ -421,7 +429,7 @@ body {
 .page2 .verticalLine{
   width: 100vw;
   height: 50px;
-  background: var(--sencond-bg-color);
+  background: var(--second-bg-color);
 
   transform-origin: center center;
   transform: rotate(-1.8deg) ;
@@ -728,8 +736,8 @@ margin: 45px 0px;
 .section4 .exploreButton{
   padding: 6px 20px ;
 border-radius: 4px;
-  border: 1px solid var(--sencond-bg-color);
-  color: var(--sencond-bg-color);
+  border: 1px solid var(--second-bg-color);
+  color: var(--second-bg-color);
   outline: none;
   background-color: transparent;
   cursor: pointer;
@@ -741,11 +749,11 @@ border-radius: 4px;
 }
 .section4 .exploreButton:hover{
 
-  border: 1px solid var(--sencond-bg-color);
+  border: 1px solid var(--second-bg-color);
   padding: 6px 20px ;
   border-radius: 4px;
   color: #fff;
-  background-color: var(--sencond-bg-color);
+  background-color: var(--second-bg-color);
   box-shadow: 2px 2px 15px #0095ff39;
   cursor: pointer;
 
@@ -785,6 +793,20 @@ border-radius: 4px;
 .section4 .information-images img{
 width: 100%;
 
+}
+
+.linearLine{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+overflow: hidden;
+}
+.linearLine h1{
+  font-size: 30rem;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 
@@ -846,8 +868,122 @@ transform: translateY(16px);
 #test{
   width: 120px;
   height: 120px;
-  background-color: var(--sencond-bg-color);
+  background-color: var(--second-bg-color);
 margin: 60px;
+}
+
+.modern-shoes .qualities .qualites{
+  max-width: 70%;
+    display: flex;
+    gap: 16px;
+    padding: 5px;
+    align-items: center;
+    margin: 10px 0px;
+    justify-content: center;
+}
+.modern-shoes .qualities .qualityBox1 .iconsDesign{
+  font-size: 1.1rem;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(197, 251, 197);
+  color: rgb(18, 129, 34);
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.modern-shoes .qualities .qualityBox1 .iconsDesign2
+{
+  background-color: rgb(251, 226, 192);
+  color: rgb(248, 148, 8);
+}
+.modern-shoes .qualities .qualityBox1 .iconsDesign3
+{
+  background-color: rgb(251, 227, 223);
+  color: tomato;
+}
+.modern-shoes .qualities .qualityBox2 h3{
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 12px;
+  color: #252525;
+
+}
+.modern-shoes .qualities .qualityBox2 p{
+  font-size: 1rem;
+  font-weight: 500;
+ 
+  color: rgb(99, 97, 97);
+}
+
+
+
+/* ================================section 6 design started=================== */
+
+.section6{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.section6 #overSceenImage1{
+  width: 140px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: rotate(-45deg);filter: blur(5px);
+}
+.section6 .neverStop{
+  width: auto;
+  height: auto;
+
+  position: relative;
+ 
+
+}
+
+.section6 .neverStop h1{
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+.section6 .neverStop p{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  align-items: center;
+  color: rgb(94, 94, 94);
+ 
+}
+.section6 button{
+  color: #fff;
+  background-color: var(--menustextcolor);
+  padding: 4px 28px;
+  border-radius: 50px;
+box-shadow: var(--box-shadow);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin: 18px 0px;
+ 
+}
+.section6 .justdoitImage{
+  width: 40%;
+  height: auto;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.section6 .justdoitImage img{
+  width: 80%;
+  z-index: 2;
+  mix-blend-mode:multiply;
+
 }
 
 
@@ -855,6 +991,76 @@ margin: 60px;
 
 
 
+footer{
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  background-color: var(--boxBackground);
+ 
+
+}
+footer #footerSection{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+footer h1{
+  font-size: 1.15rem;
+}
+footer section ul{
+  list-style: none;
+  margin: 12px 0px;
+}
+footer section ul li{
+font-size: .88rem;
+padding: 1px 0px;
+
+}
+footer section ul li:hover{
+color: #0094FF;
+cursor: pointer;
+transition: .3s;
+
+}
+
+footer .subscribe{
+  font-size: 1rem;
+  color: #000;
+  margin: 12px 0px;
+
+}
+footer .inputsAndButtons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .inputsAndButtons input{
+  padding: 2px 4px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 4px  0px 0px 4px;
+}
+footer .inputsAndButtons button{
+  padding: 2.8px 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+background-color: var(--menustextcolor);
+color: #FFF;
+}
+
+footer .lastFooter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 16px;
+}
+footer .lastFooter img{
+  width: 300px;
+}
 
 
 
@@ -938,6 +1144,19 @@ margin: 60px;
   .curser{
     display: none;
   }
+  .section5 #sec5-heading{
+    font-size: 2rem;
+   }
+
+   .section6 .neverStop h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  .section6 .justdoitImage img{
+    width: 90%;
+  
+  }
+
  
 
 }
@@ -1039,9 +1258,31 @@ margin: 60px;
   .section4 .information-images{
     width: 95%;
   }
+  .section6{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  
+  }
+
+  .section6 .justdoitImage{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
  
   
-
+  footer #footerSection{
+    display: flex;
+  flex-direction: column;
+    gap: 16px;
+    padding: 4px 16px;
+  }
   /* .hero-section .title {
     text-align: center;
   } */
@@ -1069,7 +1310,7 @@ margin: 60px;
 
   }
   .sidebar .sidebar-menus {
-    width: 70%;
+    width: 100%;
   }
   .hero-section .section2 img {
     width: 300px;
@@ -1141,6 +1382,35 @@ margin: 60px;
   }
   .section4 .information-images ul li{
      font-size: 12px;
+  }
+  .section5 #sec5-heading{
+    font-size: 1.8rem;
+    padding: 12px 0px;
+   }
+   .modern-shoes .qualities .qualites{
+    max-width: 100%;
+   
+  }
+
+  .section6 .neverStop h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .section6 .neverStop p{
+    font-size: 1rem;
+  
+  }
+  .section6 button{
+    font-size: .95rem;
+
+  }
+  .section6 .justdoitImage{
+    width: 100%;
+
+  }
+  .section6 .justdoitImage img{
+    width: 80%;
+
   }
  
 

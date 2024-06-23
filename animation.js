@@ -89,16 +89,25 @@ gsap.from(".reviews li",{
   opacity:0
 })
 
-let animation = document.querySelector(".animation")
 
-animation.addEventListener("click",()=>{
-  gsap.from("#test",{
-    x:250,
-    duration:1,
+// text animate
+// gsap.to(".linearLine #scrollerName",{
+//   transform:"translate(-70%)",  
+
+//   scrollTrigger:{
+//     trigger:".linearLine",
+//     markers:true,
+//     scrub:3,
+//     pin:true,
+//     start:"top 0%",
+//     end:"top -100%"
+// }
 
 
-  })
-})
+// })
+
+
+
 
 
 
