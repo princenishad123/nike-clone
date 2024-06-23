@@ -3,6 +3,15 @@
 
 // you can change it to simple.
 
+
+const body = document.getElementsByTagName("body")[0];
+const loader = document.querySelector(".loaderWrapper");
+
+body.onload = () =>{
+  
+loader.style.display = "none"
+}
+
 const bar = document.querySelector("#menusButton");
 const sidebarMenus = document.querySelector("#sidebarMenus");
 const sidebarForSmallDevices = document.querySelector(
@@ -28,6 +37,7 @@ sidebarForSmallDevices.onclick = (e) => {
 
 let firstPage = document.querySelector("#first-page");
 let mover = document.querySelector("#mover");
+
 
 // firstPage.addEventListener("mousemove", (e) => {
 //   console.log(e.clientX);
